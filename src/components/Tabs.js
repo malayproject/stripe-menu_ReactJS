@@ -3,10 +3,9 @@ import TabsData from "./TabsData";
 import Tab from "./Tab";
 
 const Tabs = (props) => {
-  // console.log("Tabs props are ", props);
   let { handleHover } = props;
   return (
-    <div className="tabs">
+    <div className="tabs" onMouseLeave={props.handleMouseOut}>
       {TabsData.map((tabData) => {
         return (
           <Tab tabData={tabData} handleHover={handleHover} key={tabData.id} />
